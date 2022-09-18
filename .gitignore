@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+__pycache__
+# C extensions
+*.so
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+eggs/
+lib/
+lib64/
+parts/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+data/
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+dump.rdb
+erl_crash.dump
+flower.db
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+
+# migrations
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+
+env/
+venv/
+.idea/
+.vscode/
+assets/
+flower
+.env
+public/
+db.sqlite3
+htmlcov/
+.coverage
+.DS_Store
+celerybeat.pid
