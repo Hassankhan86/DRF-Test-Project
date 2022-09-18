@@ -42,3 +42,19 @@ class CustomUser(AbstractUser):
     REQUIRED_FIELDS = []
 
     objects = CustomUserManager()
+    
+    
+class Profile(models.Model):
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, null=True,)
+    first_name = models.CharField(max_length=512, null=True, blank=True)
+    last_name = models.CharField(max_length=512, null=True, blank=True)
+    designation =models.CharField(max_length=512, null=True, blank=True)
+    degree = models.CharField(max_length=512, null=True, blank=True)
+    address = models.CharField(max_length=512, null=True, blank=True)
+    gender =models.CharField(max_length=512, null=True, blank=True)
+    company = models.CharField(max_length=512, null=True, blank=True)
+    salary  = models.IntegerField(null=True, blank=True, default=None)
+    createdAt = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.first_name
