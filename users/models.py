@@ -58,3 +58,13 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.first_name
+    
+class Post(models.Model):
+    
+    title = models.CharField(max_length=512, null=True, blank=True)
+    owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True,)
+    content = models.TextField()
+    createdAt = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
